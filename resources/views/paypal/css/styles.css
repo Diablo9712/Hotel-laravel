@@ -1,0 +1,301 @@
+@font-face {
+  font-family: "pp-sans-small-regular";
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansSmall-Regular.eot");
+  src: url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansSmall-Regular.eot?#iefix") format("embedded-opentype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansSmall-Regular.woff") format("woff"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/headlinedark/festivo1.ttf") format("truetype"), url("https://www.paypalobjects.com/webstatic/mktg/2014design/font/PP-Sans/PayPalSansSmall-Regular.svg") format("svg");
+}
+body{
+  overflow-x: hidden;
+  font-family: "pp-sans-small-regular", Helvetica Neue, Arial, sans-serif;
+  font-weight: normal;
+  font-variant: normal;
+  padding: 0;
+  margin: 0;
+  cursor: default;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.backfull{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 10;
+}
+.backfull.rel{
+  position: relative;
+  min-height: 100vh;
+}
+.panels{
+  position: relative;
+  width: 500px;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.5);
+  overflow: hidden;
+  padding: 20px 0;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 100px;
+  z-index: 10;
+}
+.panels img{
+  margin: 0 auto;
+  height: 84px;
+  width: 160px;
+  position: relative;
+}
+.panels .description{
+  width: 90%;
+  text-align: left;
+  margin: 0 auto;
+  font-size: 14px;
+  overflow: hidden;
+}
+.panels .btns{
+  position: relative;
+  width: 160px;
+  margin: 0 auto;
+  height: 35px;
+  border-radius: 1px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  overflow: hidden;
+  font-size: 12px;
+  background-color: #0070ba;
+  transition: all .2s;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 2px;
+  line-height: 35px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: top;
+  color: white;
+}
+.panels .btns.grey{
+  background-color: rgba(0,0,0,0.3);
+}
+.panels .btns.grey:hover{
+  background-color: rgba(0,0,0,0.4);
+}
+.panels .btns:active .children{
+  animation: 1s children 1;
+}
+.panels .btns:hover{
+  background-color: #005ea6;
+}
+.panels.bottom{
+  margin-bottom: 100px;
+}
+.panels .description .id_img{
+  width: 200%;
+  height: 300px;
+  transition: all .4s;
+}
+.panels .description .id_img.face{
+  margin-left: -9%;
+}
+.panels .description .id_img.back{
+  margin-left: -85%;
+}
+.children{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  transition: all .2s;
+  margin-left: -5px;
+  left: 50%;
+  margin-top: -5px;
+  top: 50%;
+  background-color: rgba(255,255,255,.2);
+}
+.bg{
+  background: url('bg_image.jpg') no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  position: fixed;
+  filter: brightness(40%);
+  -webkit-filter: brightness(40%);
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.logo{
+  display: inline-block;
+  width: 136px;
+  height: 43px;
+  overflow: hidden;
+  text-indent: -999em;
+  background: transparent url("https://www.paypalobjects.com/webstatic/i/logo/rebrand/ppcom-white.svg") center center no-repeat;
+  background-size: 124px 33px;
+  vertical-align: middle;
+  padding-top: 5px;
+  margin-top: -10px;
+  position: absolute;
+  z-index: 9;
+  left: 50%;
+  margin-left: -68px;
+  top: 35px;
+}
+.panels .description .inp_text{
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid silver;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  transition: all .2s;
+  text-align: left;
+  background: white;
+  width: 80%;
+  color: silver;
+  height: 35px;
+}
+.panels .description .inp_text input{
+  height: 100%;
+  width: 95%;
+  position: absolute;
+  left: 2.5%;
+  top: 0;
+  border: none !important;
+  outline: none !important;
+}
+.panels .description .inp_text.active{
+  border: 1px solid #0070ba;
+}
+.panels .description .inp_text.error{
+  border-color: #E74C3C;
+}
+.panels .description .inp_text .mark{
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+}
+.panels .description .inp_text .mark.green{
+  color: #27AE60;
+}
+.panels .description .inp_text .mark.red{
+  color: #E74C3C;
+}
+.panels .description .inp_text select{
+  border: none;
+  width: 96%;
+  margin: 0 auto;
+  margin-left: 2%;
+  outline: none;
+  position: relative;
+  height: 100%;
+}
+.panels .description .inp_text[name="double"]{
+  width: 39.3%;
+  display: inline-block;
+  vertical-align: top;
+}
+.panels .loader{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  display: none;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+}
+.panels .loader.start{
+  display: flex;
+}
+.panels .cggreen{
+  width: 100px;
+  height: 100px;
+  border: 4px solid #27ae60;
+  border-radius: 200px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  color: #27ae60;
+  font-size: 6em;
+  overflow: hidden;
+  line-height: 120px;
+  margin: 0 auto;
+}
+.panels .loader .load{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 150px;
+  border: 4px solid rgba(0,0,0,0.1);
+  border-top-color: #0070ba;
+  transition: all .2s;
+  animation: 2s loader infinite;
+}
+.panels .profils{
+  position: relative;
+  min-height: 150px;
+  text-align: center;
+}
+.panels .profils .img{
+  width: 140px;
+  height: 140px;
+  border: 4px solid rgba(0,0,0,0.1);
+  border-radius: 230px;
+  background-color: white;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.panels .profils .img .avatar{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+.panels .profils .name{
+  position: absolute;
+  left: 50px;
+  right: 50px;
+  height: 30px;
+  font-size: 20px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+@keyframes loader{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes children{
+  0%{
+    opacity: 1;
+  }
+  100%{
+    transform: scale(165);
+  }
+}
+@media screen and (max-width: 500px){
+  .panels{
+    width: 100%;
+    border-radius: 1px;
+  }
+}
